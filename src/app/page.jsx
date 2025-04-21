@@ -69,7 +69,7 @@ export default function Home() {
       <div className="flex gap-2 mb-4 ">
         <Input
           type="text"
-          placeholder="Bir IP adresi gir"
+          placeholder="Enter an IP address"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={handleKeyPress}
