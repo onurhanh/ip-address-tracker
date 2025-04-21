@@ -1,7 +1,9 @@
 🌐 IP Address Tracker
+
 IP Address Tracker is a simple and interactive web application that allows users to track and view detailed information about any IP address. The app fetches geolocation data such as country, city, timezone, and ISP, and displays it alongside a dynamic map view.
 
 ✨ Features
+
 🌍 Get real-time IP address geolocation data
 
 🧭 View country, city, timezone, and ISP details
@@ -13,6 +15,7 @@ IP Address Tracker is a simple and interactive web application that allows users
 🎯 Search by entering any valid IP address
 
 🔧 Built With
+
 Next.js — React framework for production
 
 Tailwind CSS — Utility-first CSS framework
