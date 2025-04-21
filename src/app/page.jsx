@@ -90,7 +90,6 @@ export default function Home() {
 
       {ipData && (
         <div className="relative w-full max-w-5xl h-[500px] mb-4 mt-15">
-          {/* Harita */}
           <MapView
             className="w-full h-full"
             lat={parseFloat(ipData.latitude)}
