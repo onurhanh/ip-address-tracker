@@ -65,8 +65,8 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col items-center">
-      <h1 className="text-2xl font-bold text-center my-4">IP Address Tracker</h1>
+    <main className="flex flex-col items-center bg-[url('/images/bg-image.svg')] bg-no-repeat xl:bg-contain">
+      <h1 className="text-2xl font-bold text-center my-4 text-[#ffffff]">IP Address Tracker</h1>
       <div className="flex gap-2 mb-4 ">
         <Input
           type="text"
@@ -78,7 +78,7 @@ export default function Home() {
         />
         <Button
           onClick={handleIpSearch}
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-400"
         >
           Ara
         </Button>
