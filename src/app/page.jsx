@@ -4,7 +4,7 @@ import MapView from './components/MapView';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader } from '@/components/ui/card';
-import { 
+import {
   Table,
   TableBody,
   TableCaption,
@@ -12,7 +12,8 @@ import {
   TableFooter,
   TableHead,
   TableHeader,
-  TableRow, } from '@/components/ui/table';
+  TableRow,
+} from '@/components/ui/table';
 
 export default function Home() {
   const [ipData, setIpData] = useState(null);
@@ -73,7 +74,7 @@ export default function Home() {
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={handleKeyPress}
-          className="border p-2 rounded w-64"
+          className="border p-2 rounded sm:w-64"
         />
         <Button
           onClick={handleIpSearch}
@@ -89,43 +90,32 @@ export default function Home() {
 
 
       {ipData && (
-        <div className="relative w-full h-screen mt-15">
+        <div className="relative w-full h-screen sm:mt-20 mt-25">
           <MapView
             className="w-full h-full"
             lat={parseFloat(ipData.latitude)}
             lng={parseFloat(ipData.longitude)}
           />
-
-          <Card
-            className="absolute flex flex-row transform top-1 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 bg-white/90 backdrop-blur-md rounded shadow-lg p-4"
+          <div
+            className="absolute sm:grid sm:grid-cols-4 sm:justify-center flex-col  transform top-1 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 backdrop-blur-md shadow-lg sm:p-4 p-3 sm:flex-row flex gap-3 sm:gap-6 rounded-xl max-h-[30%] sm:max-h-[20%] border sm:py-6 sm:text-[12px] xl:text-[16px] text-[10px] sm:w-[75%] w-3xs text-wrap"
           >
-            <Table>
-              <TableHeader className="w-[100px]">
-                <TableRow>
-                  <TableHead className="w-[100px]">
-                    IP ADRESS
-                  </TableHead>
-                  <TableHead>
-                    LOCATION
-                  </TableHead>
-                  <TableHead>
-                    TIMEZONE
-                  </TableHead>
-                  <TableHead>
-                    ISP
-                  </TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableCell className="font-medium">{ipData.ip}</TableCell>
-                  <TableCell>{ipData.country_name},{ipData.city}</TableCell>
-                  <TableCell>{ipData.timezone}</TableCell>
-                  <TableCell>{ipData.org}</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </Card>
+            <div className='flex flex-col sm:text-start text-center  w-full sm:text-wrap sm:border-r'>
+              <h5 className=" text-[#2C2C2C] mb-1 sm:mt-1">IP ADRESS</h5>
+              <h5 className="font-bold sm:text-wrap">{ipData.ip}</h5>
+            </div>
+            <div className='flex flex-col   sm:text-start text-center w-full sm:border-r'>
+              <h5 className=" text-[#2C2C2C] mb-1 sm:mt-1">LOCATION</h5>
+              <h5 className=" font-bold">{ipData.country_name},{ipData.city}</h5>
+            </div>
+            <div className='flex flex-col sm:text-start text-center w-full sm:border-r'>
+              <h5 className=" text-[#2C2C2C] mb-1 sm:mt-1">TIMEZONE</h5>
+              <h5 className="font-bold">{ipData.timezone}</h5>
+            </div>
+            <div className='flex flex-col sm:text-start text-center w-full '>
+              <h5 className=" text-[#2C2C2C] mb-1 sm:mt-1">ISP</h5>
+              <h5 className="font-bold">{ipData.org}</h5>
+            </div>
+          </div>
         </div>
       )}
     </main>
