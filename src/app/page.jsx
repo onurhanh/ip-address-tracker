@@ -14,6 +14,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { ArrowRight, ArrowRightCircle, ArrowRightIcon } from 'lucide-react';
 
 export default function Home() {
   const [ipData, setIpData] = useState(null);
@@ -80,7 +81,7 @@ export default function Home() {
           onClick={handleIpSearch}
           className="bg-primary right-0 absolute  text-white px-4 py-2 rounded-r-lg hover:bg-gray-700"
         >
-          Ara
+          <ArrowRight />
         </Button>
       </div>
 
