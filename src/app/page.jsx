@@ -97,7 +97,7 @@ export default function Home() {
             lng={parseFloat(ipData.longitude)}
           />
           <div
-            className="absolute sm:grid sm:grid-cols-4 sm:justify-center flex-col  transform top-1 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 backdrop-blur-md shadow-lg sm:p-4 p-3 sm:flex-row flex gap-3 sm:gap-6 rounded-xl max-h-[30%] sm:max-h-[20%] border sm:py-6 sm:text-[12px] xl:text-[16px] text-[10px] sm:w-[75%] w-3xs text-wrap text-[#2C2C2C] bg-[#FFFFFF]"
+            className="absolute sm:grid sm:grid-cols-4 sm:justify-center flex-col  transform top-1 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 backdrop-blur-md shadow-lg sm:p-4 p-3 sm:flex-row flex gap-3 sm:gap-6 rounded-xl max-h-[30%] sm:max-h-[20%] border sm:py-6 sm:text-[12px] xl:text-[16px] text-[10px] sm:w-[75%] w-3xs text-wrap text-[#FFFFFF] "
           >
             <div className='flex flex-col sm:text-start text-center  w-full sm:text-wrap sm:border-r'>
               <h5 className="mb-1 sm:mt-1">IP ADRESS</h5>
