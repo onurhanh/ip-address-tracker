@@ -65,20 +65,20 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col items-center bg-[url('/images/bg-image.svg')] bg-no-repeat xl:bg-contain">
+    <main className="flex flex-col items-center bg-[url('/images/bg-image.svg')] bg-no-repeat xl:bg-contain font-sans">
       <h1 className="text-2xl font-bold text-center my-4 text-[#ffffff]">IP Address Tracker</h1>
-      <div className="flex gap-2 mb-4 ">
+      <div className="flex gap-2 mb-4 relative">
         <Input
           type="text"
           placeholder="Enter an IP address"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={handleKeyPress}
-          className="border p-2 rounded sm:w-64"
+          className="border text-white p-2 rounded-lg sm:w-94"
         />
         <Button
           onClick={handleIpSearch}
-          className="bg-primary text-white px-4 py-2 rounded hover:bg-gray-700"
+          className="bg-primary right-0 absolute  text-white px-4 py-2 rounded-r-lg hover:bg-gray-700"
         >
           Ara
         </Button>
@@ -97,10 +97,10 @@ export default function Home() {
             lng={parseFloat(ipData.longitude)}
           />
           <div
-            className="absolute sm:grid sm:grid-cols-4 sm:justify-center flex-col  transform top-1 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 backdrop-blur-md shadow-lg sm:p-4 p-3 sm:flex-row flex gap-3 sm:gap-6 rounded-xl max-h-[30%] sm:max-h-[20%] border sm:py-6 sm:text-[12px] xl:text-[16px] text-[10px] sm:w-[75%] w-3xs text-wrap text-[#ffffff]"
+            className="absolute sm:grid sm:grid-cols-4 sm:justify-center flex-col  transform top-1 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 backdrop-blur-md shadow-lg sm:p-4 p-3 sm:flex-row flex gap-3 sm:gap-6 rounded-xl max-h-[30%] sm:max-h-[20%] border sm:py-6 sm:text-[12px] xl:text-[16px] text-[10px] sm:w-[75%] w-3xs text-wrap text-[#2C2C2C] bg-[#FFFFFF]"
           >
             <div className='flex flex-col sm:text-start text-center  w-full sm:text-wrap sm:border-r'>
-              <h5 className=" mb-1 sm:mt-1">IP ADRESS</h5>
+              <h5 className="mb-1 sm:mt-1">IP ADRESS</h5>
               <h5 className="font-bold sm:text-wrap">{ipData.ip}</h5>
             </div>
             <div className='flex flex-col   sm:text-start text-center w-full sm:border-r'>
