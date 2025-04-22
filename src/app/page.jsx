@@ -64,7 +64,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col items-center p-4">
+    <main className="flex flex-col items-center">
       <h1 className="text-2xl font-bold text-center my-4">IP Address Tracker</h1>
       <div className="flex gap-2 mb-4 ">
         <Input
@@ -89,7 +89,7 @@ export default function Home() {
 
 
       {ipData && (
-        <div className="relative w-full max-w-5xl h-[500px] mb-4 mt-15">
+        <div className="relative w-full h-screen mt-15">
           <MapView
             className="w-full h-full"
             lat={parseFloat(ipData.latitude)}

@@ -2,9 +2,9 @@ import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
 
 const containerStyle = {
   width: '100%',
-  height: '500px',
+  height: '100%',
 };
-
+ 
 const MapView = ({ lat, lng }) => {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
