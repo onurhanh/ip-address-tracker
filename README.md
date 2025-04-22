@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🌐 IP Address Tracker
 
-## Getting Started
+IP Address Tracker is a simple and interactive web application that allows users to track and view detailed information about any IP address. The app fetches geolocation data such as country, city, timezone, and ISP, and displays it alongside a dynamic map view.
 
-First, run the development server:
+✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🌍 Get real-time IP address geolocation data
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🧭 View country, city, timezone, and ISP details
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🗺️ Map integration to visualize the IP location
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📱 Responsive and clean UI using Tailwind CSS
 
-## Learn More
+🎯 Search by entering any valid IP address
 
-To learn more about Next.js, take a look at the following resources:
+🔧 Built With
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Next.js — React framework for production
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Tailwind CSS — Utility-first CSS framework
 
-## Deploy on Vercel
+IPAPI & ipify — For fetching IP and location data
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+React Hooks — For state and side effect management
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Map Component — To display location visually
+
+<img width="1083" alt="Ekran Resmi 2025-04-22 00 04 39" src="https://github.com/user-attachments/assets/f31806c6-9ad9-4bd1-94a9-39da41685c9a" />
+
