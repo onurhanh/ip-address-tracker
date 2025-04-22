@@ -26,6 +26,8 @@ React Hooks — For state and side effect management
 
 Map Component — To display location visually
 
-<img width="1459" alt="Ekran Resmi 2025-04-22 18 38 10" src="https://github.com/user-attachments/assets/b89e8356-5499-4baa-a301-77e9d179906d" />
+<img width="1462" alt="Ekran Resmi 2025-04-22 19 02 56" src="https://github.com/user-attachments/assets/e8c305f7-ee7e-4264-9d25-5308df2e98f5" />
+
+
 
 
