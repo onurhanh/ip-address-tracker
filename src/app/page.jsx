@@ -20,6 +20,7 @@ export default function Home() {
   const [ipData, setIpData] = useState(null);
   const [inputValue, setInputValue] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchInitialData = async () => {
@@ -32,11 +33,22 @@ export default function Home() {
         setIpData(dataJson);
       } catch (err) {
         setErrorMessage('Başlangıç verileri alınamadı.');
+      } finally {
+        setIsLoading(false);
       }
     };
 
     fetchInitialData();
   }, []);
+
+  if (isLoading) {
+    return (
+      <main className="flex justify-center items-center h-screen font-sans bg-black text-white">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-white border-opacity-50"></div>
+      </main>
+    );
+  }
+
 
   const handleIpSearch = async () => {
     if (!inputValue.trim()) {
@@ -67,7 +79,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col items-center bg-[url('/images/bg-image.svg')] bg-no-repeat xl:bg-contain font-sans">
-      <h1 className="text-2xl font-bold text-center my-4 text-[#ffffff]">IP Address Tracker</h1>
+      <h1 className="text-2xl font-bold text-center my-4 text-white dark:text-black">IP Address Tracker</h1>
       <div className="flex gap-2 mb-4 relative">
         <Input
           type="text"
